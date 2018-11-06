@@ -16,7 +16,7 @@ if [ -f openocd-0.9.0.tar.gz ];
 then
   rm openocd-0.9.0.tar.gz
 fi
-wget http://downloads.sourceforge.net/project/openocd/openocd/0.9.0/openocd-0.9.0.tar.gz
+wget https://shravanj.com/files/openocd-0.9.0.tar.gz
 if [ -d openocd-0.9.0 ];
 then
   rm -rf openocd-0.9.0
@@ -28,7 +28,7 @@ echo '========================================'
 echo 'Building and installing OpenOCD 0.9.0...'
 echo '========================================'
 cd openocd-0.9.0
-./configure
+./configure --disable-werror
 make
 sudo make install
 
